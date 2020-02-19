@@ -8,6 +8,8 @@ int main()
 
 	int side_1, side_2, side_3;
 
+	printf("Enter the first side");
+
 	scanf("%d", &side_1);
 
 	if(side_1 < 0)
@@ -17,6 +19,8 @@ int main()
 		exit(0);
 	}
 
+	printf("Enter the second side");
+
 	scanf("%d", &side_2);
 
 	if(side_2 < 0)
@@ -25,6 +29,8 @@ int main()
 
 		exit(0);	
 	}
+
+	printf("Enter the third side");
 
 	scanf("%d", &side_3);
 
