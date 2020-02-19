@@ -13,6 +13,8 @@ int main()
 	if(side_1 < 0)
 	{
 		printf("Intput is not a positive integer");
+
+		exit(0);
 	}
 
 	scanf("%d", &side_2);
@@ -20,6 +22,8 @@ int main()
 	if(side_2 < 0)
 	{
 		printf("Intput is not a positive integer");
+
+		exit(0);	
 	}
 
 	scanf("%d", &side_3);
@@ -27,5 +31,7 @@ int main()
 	if(side_3 < 0)
 	{
 		printf("Intput is not a positive integer");
+
+		exit(0);
 	}
 }
