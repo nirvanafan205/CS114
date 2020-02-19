@@ -4,7 +4,7 @@
 
 int main()
 {
-	printf("Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle");
+	printf("Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle \n");
 
 	int side_1, side_2, side_3;
 
