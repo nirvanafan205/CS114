@@ -8,26 +8,24 @@ int main()
 
 	int side_1, side_2, side_3;
 
-	scanf(%d, side_1);
+	scanf("%d", &side_1);
 
 	if(side_1 < 0)
 	{
 		printf("Intput is not a positive integer");
 	}
 
-	scanf(%d, side_2);
+	scanf("%d", &side_2);
 
 	if(side_2 < 0)
 	{
 		printf("Intput is not a positive integer");
 	}
 
-	scanf(%d, side_1);
+	scanf("%d", &side_3);
 
 	if(side_3 < 0)
 	{
 		printf("Intput is not a positive integer");
 	}
-
-
 }
