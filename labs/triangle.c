@@ -8,7 +8,7 @@ int main()
 
 	int side_1, side_2, side_3;
 
-	printf("Enter the first side \n");
+	printf("\n Enter the first side \n");
 
 	scanf("%d", &side_1);
 
@@ -19,7 +19,7 @@ int main()
 		exit(0);
 	}
 
-	printf("Enter the second side \n");
+	printf("\n Enter the second side \n");
 
 	scanf("%d", &side_2);
 
@@ -30,7 +30,7 @@ int main()
 		exit(0);	
 	}
 
-	printf("Enter the third side \n");
+	printf("\n Enter the third side \n");
 
 	scanf("%d", &side_3);
 
