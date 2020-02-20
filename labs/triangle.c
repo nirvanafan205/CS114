@@ -40,4 +40,17 @@ int main()
 
 		exit(0);
 	}
+
+	int max = side_1;
+		
+	if(max < side_2)
+	{
+		max == side_2;
+	}
+	else if(max < side_3)
+	{
+		max == side_3;
+	}
+	
+	printf("%", &max);
 }
