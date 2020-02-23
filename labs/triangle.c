@@ -19,21 +19,31 @@ int main()
 	printf("\nEnter the third side \n");
 	scanf("%d", &side_3);
 
-
-	int check_1 = side_1 + side_2;
-	int check_3 = side_2 + side_3;
-	int check_2 = side_2 + side_3;
-
-	if(check_1 > side_3 || check_2 > side_1 || check_3 > side_1)
+	if(side_1 == side_2 && side_1 == side_3)
 	{
-		int sum = ( side_1 + side_2 + side_3 
+		printf("\nEqualatoral\n");
 
+		printf("\nFirst side %d \n", side_1);
+		printf("\nSecond side %d \n", side_2);
+		printf("\nThird side %d \n", side_3);
+	}
 
+	else if(side_1 == side_2 || side_1 == side_3 || side_2 == side_3)
+	{
+		printf("\nIsoceles\n");
+
+		printf("\nFirst side %d \n", side_1);
+		printf("\nSecond side %d \n", side_2);
+		printf("\nThird side %d \n", side_3);
 	}
 
 	else
 	{
-		printf("%d", 
-	}
+		printf("\nScalene\n");
 
+		printf("\nFirst side %d \n", side_1);
+		printf("\nSecond side %d \n", side_2);
+		printf("\nThird side %d \n", side_3);
+
+	}
 }
