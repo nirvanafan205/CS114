@@ -9,48 +9,31 @@ int main()
 	int side_1, side_2, side_3;
 
 	printf("\nEnter the first side \n");
-
 	scanf("%d", &side_1);
 
-	if(side_1 < 0)
-	{
-		printf("Intput is not a positive integer");
-
-		exit(0);
-	}
 
 	printf("\nEnter the second side \n");
-
 	scanf("%d", &side_2);
 
-	if(side_2 < 0)
-	{
-		printf("Intput is not a positive integer");
-
-		exit(0);	
-	}
 
 	printf("\nEnter the third side \n");
-
 	scanf("%d", &side_3);
 
-	if(side_3 < 0)
-	{
-		printf("Intput is not a positive integer");
 
-		exit(0);
+	int check_1 = side_1 + side_2;
+	int check_3 = side_2 + side_3;
+	int check_2 = side_2 + side_3;
+
+	if(check_1 > side_3 || check_2 > side_1 || check_3 > side_1)
+	{
+		int sum = ( side_1 + side_2 + side_3 
+
+
 	}
 
-	int max = side_1;
-		
-	if(max < side_2)
+	else
 	{
-		max == side_2;
+		printf("%d", 
 	}
-	else if(max < side_3)
-	{
-		max == side_3;
-	}
-	
-	printf("%", &max);
+
 }
