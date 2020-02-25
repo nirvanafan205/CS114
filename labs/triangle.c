@@ -5,7 +5,6 @@
 
 int main()
 {
-
 	int runs;
 
 	printf("How many times would you like to check for Triangle input?");
@@ -14,7 +13,6 @@ int main()
 
 	for(int i = 0; i < runs; i++)
 	{
-
 		printf("Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle \n");
 
 		double side_1, side_2, side_3;
