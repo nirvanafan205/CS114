@@ -5,65 +5,76 @@
 
 int main()
 {
-	printf("Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle \n");
 
-	double side_1, side_2, side_3;
+	int runs;
 
-	printf("\nEnter the first side \n");
-	scanf("%lf", &side_1);
+	printf("How many times would you like to check for Triangle input?");
 
-	printf("\nEnter the second side \n");
-	scanf("%lf", &side_2);
+	scanf("d", &runs);
 
-	printf("\nEnter the third side \n");
-	scanf("%lf", &side_3);
-
-	double sum = (side_1 + side_2 + side_3) / 2;
-	double area = (sum * (sum-side_1) * (sum - side_2) * (sum - side_3) );
-
-	if(side_1 == side_2 && side_1 == side_3)
+	for(int i = 0; i < runs; i++)
 	{
-		printf("\nEqualatoral");		
-		printf("\nFirst side: %f", side_1);
-		printf("\nSecond side: %f", side_2);		
-		printf("\nThird side: %f\n", side_3);
-		printf("Area: %f\n", sqrt(area) );
-	}
 
-	else if(side_1 == side_2 || side_1 == side_3 || side_2 == side_3)
-	{
-		printf("\nIsoceles");
-		printf("\nFirst side: %f", side_1);
-		printf("\nSecond side: %f", side_2);
-		printf("\nThird side: %f\n", side_3);
-		printf("Area: %f\n", sqrt(area) );
-	}
+		printf("Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle \n");
 
-	else
-	{
-		printf("\nScalene");
-		printf("\nFirst side: %f", side_1);
-		printf("\nSecond side: %f", side_2);
-		printf("\nThird side: %f\n", side_3);
-		printf("Area: %f\n", sqrt(area) );
+		double side_1, side_2, side_3;
+
+		printf("\nEnter the first side \n");
+		scanf("%lf", &side_1);
+
+		printf("\nEnter the second side \n");
+		scanf("%lf", &side_2);
+
+		printf("\nEnter the third side \n");
+		scanf("%lf", &side_3);
+
+		double sum = (side_1 + side_2 + side_3) / 2;
+		double area = (sum * (sum-side_1) * (sum - side_2) * (sum - side_3) );
+
+		if(side_1 == side_2 && side_1 == side_3)
+		{
+			printf("\nEqualatoral");		
+			printf("\nFirst side: %f", side_1);
+			printf("\nSecond side: %f", side_2);		
+			printf("\nThird side: %f\n", side_3);
+			printf("Area: %f\n", sqrt(area) );
+		}
+
+		else if(side_1 == side_2 || side_1 == side_3 || side_2 == side_3)
+		{
+			printf("\nIsoceles");
+			printf("\nFirst side: %f", side_1);
+			printf("\nSecond side: %f", side_2);
+			printf("\nThird side: %f\n", side_3);
+			printf("Area: %f\n", sqrt(area) );
+		}
+
+		else
+		{
+			printf("\nScalene");
+			printf("\nFirst side: %f", side_1);
+			printf("\nSecond side: %f", side_2);
+			printf("\nThird side: %f\n", side_3);
+			printf("Area: %f\n", sqrt(area) );
+		}
 	}
 }
 
 /*
-Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle 
+   Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle 
 
-Enter the first side 
-2
+   Enter the first side 
+   2
 
-Enter the second side 
-2
+   Enter the second side 
+   2
 
-Enter the third side 
-2
+   Enter the third side 
+   2
 
-Equalatoral
-First side: 2
-Second side: 2
-Third side: 2
+   Equalatoral
+   First side: 2
+   Second side: 2
+   Third side: 2
 Area: 1.732051 
- */
+*/
