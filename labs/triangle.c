@@ -31,7 +31,14 @@ int main()
 		double sum = (side_1 + side_2 + side_3) / 2;
 		double area = (sum * (sum-side_1) * (sum - side_2) * (sum - side_3) );
 
-		if(side_1 == side_2 && side_1 == side_3)
+		if(side_1 || side_2 || side_3 < 0)
+		{
+			printf("Invalid input, there is a negative integer")
+			printf("First side: %f", side_1)
+			printf("First side: %f", side_2)
+			printf("First side: %f", side_3)
+		}
+		else if(side_1 == side_2 && side_1 == side_3)
 		{
 			printf("\nEqualatoral");		
 			printf("\nFirst side: %f", side_1);
