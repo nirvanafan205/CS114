@@ -5,13 +5,8 @@
 
 int main()
 {
-	int runs;
-
-	printf("How many times would you like to check for Triangle input?");
-
-	scanf("d", &runs);
-
-	for(int i = 0; i < runs; i++)
+	char run = 'y';
+	while(run != 'n')
 	{
 		printf("Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle \n");
 
@@ -29,13 +24,14 @@ int main()
 		double sum = (side_1 + side_2 + side_3) / 2;
 		double area = (sum * (sum-side_1) * (sum - side_2) * (sum - side_3) );
 
-		if(side_1 || side_2 || side_3 < 0)
+		if(side_1 < 0 || side_2 < 0 || side_3 < 0)
 		{
-			printf("Invalid input, there is a negative integer")
-			printf("First side: %f", side_1)
-			printf("First side: %f", side_2)
-			printf("First side: %f", side_3)
+			printf("\nInvalid input, there is a negative integer");
+			printf("\nFirst side: %f", side_1);
+			printf("\nFirst side: %f", side_2);
+			printf("\nFirst side: %f", side_3);
 		}
+
 		else if(side_1 == side_2 && side_1 == side_3)
 		{
 			printf("\nEqualatoral");		
@@ -62,24 +58,8 @@ int main()
 			printf("\nThird side: %f\n", side_3);
 			printf("Area: %f\n", sqrt(area) );
 		}
+
+		printf("Do you want to run this program again? Yes(y), No(n)");
+		scanf("%c%*c", &run);
 	}
 }
-
-/*
-   Intput 3 positive integers from the terminal to determine if they are valid sides of a triangle 
-
-   Enter the first side 
-   2
-
-   Enter the second side 
-   2
-
-   Enter the third side 
-   2
-
-   Equalatoral
-   First side: 2
-   Second side: 2
-   Third side: 2
-Area: 1.732051 
-*/
