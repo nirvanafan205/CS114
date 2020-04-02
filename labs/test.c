@@ -1,26 +1,30 @@
 #include <stdio.h>
 
+
 int main()
 {
-	char input;
-	int num;
+        char input;
 
-	while(input = getchar() )
-	{
-		if(input == EOF)
-		{
-			break;
-		}
+        while(input = getchar() )
+        {
+                int ascii = (int)input;
 
-		else if(input >= 48 && input <= 57)
-		{
-			num = input;
+                if(input == EOF)
+                {
+                        break;
+                }
 
-			putchar(num);
-		}
-		else
-		{
-			printf("\n");
-		}
-	}
+                else if(ascii >= 48 && ascii <= 57)
+                {
+                        int num = ascii - 48;
+
+                        putchar(num);
+                }
+
+                else
+                {
+                        printf("\n");
+                }
+        }
 }
+
