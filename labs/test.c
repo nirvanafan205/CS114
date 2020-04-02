@@ -17,9 +17,7 @@ int main()
 		{
 			num =  ascii - 48;
 
-			putchar(num);
 		}
-
 	}
 
 	printf("%d", num);
