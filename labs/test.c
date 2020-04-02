@@ -15,7 +15,7 @@ int main()
 
 		else if(ascii >= 48 && ascii <= 57)
 		{
-			num = (2 * ascii) - num;
+			num =  ascii - 48;
 
 			putchar(num);
 		}
