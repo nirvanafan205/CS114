@@ -16,7 +16,6 @@ int main()
 		else if(ascii >= 48 && ascii <= 57)
 		{
 			num =  ascii - 48;
-
 		}
 	}
 
