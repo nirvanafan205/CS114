@@ -2,9 +2,8 @@
 
 int main()
 {
-	char input;
+	char input, op;
 	int num,num_2;
-	char op;
 
 	while(input = getchar())
 	{
@@ -19,7 +18,44 @@ int main()
 		}
 
 	}
+
 	printf("%d ", num); 
+
+	while(input = getchar() )
+	{
+		if(input == EOF || input == 32)
+		{
+			break;
+
+		}
+
+		switch(input)
+		{
+			case 37:
+				op = 37;
+				break;
+
+			case 42:
+				op = 42;
+				break;
+
+
+			case 43:
+				op = 43;
+				break;
+
+			case 45:
+				op = 45;
+				break;
+
+			case 47:
+				op = 47;
+				break;
+
+			default:
+				printf("input error");
+		}
+	}
 
 	while(input = getchar() )
 	{
@@ -34,5 +70,6 @@ int main()
 		}
 	}
 
+	printf("%c ", op);
 	printf("%d", num_2);
 }
