@@ -5,14 +5,23 @@ char s1(char random[] );
 
 int main()
 {
-    char random_string[40];
 
-    char helper[40] = s1(random_string[40]);
+    int index = 40;
+
+    char random_generator[index];
+
+    random_generator[index] = s1(random_generator);
+
+    for(int i = 0; i <= index; i++)
+    {
+        printf("%c", random_generator[i]);
+
+    }
 }
 
 char s1(char random[])
 {
-    int index = 0;
+    int limit = 0;
 
     char letter_[40];
 
@@ -21,18 +30,18 @@ char s1(char random[])
 
     while(characters = 'A' + (rand() % 26))
     {
-        if(index == 40)
+        if(limit == 40)
         {
             break;
         }
 
-        letter_[index] = characters;
+        letter_[limit] = characters;
 
-        index++;
+        limit++;
     }
 
     for(int i = 0; i <= 40; i++)
     {
-        putchar(letter_[i]);
+        random[i] = letter_[i];
     }
 }
