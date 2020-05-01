@@ -2,18 +2,17 @@
 
 int main()
 {
-    char input;
+    int input = 0;
 
     int count = 0;
 
     char s2[20];
 
-
     int check;
 
-    while(input = getchar())
+    while(input = getchar() != EOF)
     {
-	    if(input == 65)
+	    if(input < 65 || input > 90)
 	    {
 		    break;
 	    }
@@ -25,7 +24,7 @@ int main()
 
     for(int i = 0; i <= count; i++)
     {
-        putchar( s2[i]);
+       putchar(s2[i]);
     }
 
 }
