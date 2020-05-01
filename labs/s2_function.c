@@ -1,30 +1,53 @@
 #include <stdio.h>
 
+char s2(char take_in[]);
+
 int main()
 {
-    int input = 0;
+	int s2_index = 20;
 
-    int count = 0;
+	char s2_[s2_index];
 
-    char s2[20];
+	s2_[s2_index] = s2(s2_);
 
-    int check;
+	printf("s2 = {\"");
 
-    while(input = getchar() != EOF)
-    {
-	    if(input < 65 || input > 90)
-	    {
-		    break;
-	    }
+	for(int j = 0; j <= s2_index; j++)
+	{
+		printf("%c", s2_[j]);
+	}
 
-            s2[count] = input;
+	printf("\"}\n");
+}
 
-            ++count;
-    }
+char s2(char take_in[])
+{
+	char input;
 
-    for(int i = 0; i <= count; i++)
-    {
-       putchar(s2[i]);
-    }
+	int count = 0;
 
+	char s2[20];
+
+	int check;
+
+	while(input = getchar() )
+	{
+		if(input < 65 || input > 90)
+		{
+			break;
+		}
+		else if(count == 20)
+		{
+			break;
+		}
+
+		s2[count] = input;
+
+		++count;
+	}
+
+	for(int b = 0; b <= count; b++)
+	{
+		take_in[b] = s2[b];
+	}
 }
