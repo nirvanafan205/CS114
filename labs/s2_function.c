@@ -26,9 +26,8 @@ char s2(char take_in[])
 
 	int count = 0;
 
-	char s2[20];
+	char s2[count];
 
-	int check;
 
 	while(input = getchar() )
 	{
@@ -36,14 +35,10 @@ char s2(char take_in[])
 		{
 			break;
 		}
-		else if(count == 20)
-		{
-			break;
-		}
 
 		s2[count] = input;
 
-		++count;
+		count++;
 	}
 
 	for(int b = 0; b <= count; b++)
