@@ -60,6 +60,5 @@ char s2(char s2_input[], int index)
 		}
 
 		s2_input[i] = array[i];	
-
 	}
 }
