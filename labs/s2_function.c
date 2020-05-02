@@ -1,48 +1,65 @@
 #include <stdio.h>
 
-char s2(char take_in[]);
+char s2(char s2_input[], int index);
 
 int main()
 {
-	int s2_index = 20;
+	int s2_index;
 
 	char s2_[s2_index];
 
-	s2_[s2_index] = s2(s2_);
+	s2(s2_, s2_index);
 
-	printf("s2 = {\"");
-
-	for(int j = 0; j <= s2_index; j++)
+	for(int a = 0; s2_[a] != '\0'; ++a)
 	{
-		printf("%c", s2_[j]);
+		putchar(s2_[a]);
 	}
-
-	printf("\"}\n");
 }
 
-char s2(char take_in[])
+char s2(char s2_input[], int index)
 {
+	char array[20] = "1234567890123456789";
+
 	char input;
 
 	int count = 0;
 
-	char s2[count];
-
+	int check = 0;
 
 	while(input = getchar() )
 	{
-		if(input < 65 || input > 90)
+		if(input == '\n')
 		{
+			array[count] = '\0';
 			break;
 		}
 
-		s2[count] = input;
+		else if(input < 65 || input > 90)
+		{
+			printf("invalid input");
+
+			array[count] = '\0';
+
+			break;
+		}
+
+		array[count] = input;
 
 		count++;
 	}
 
-	for(int b = 0; b <= count; b++)
+	index = count;
+
+	for(int i = 0; i <= count ; ++i)
 	{
-		take_in[b] = s2[b];
+		if((count < 2)  || count > 20)
+		{
+			printf("\ninvalid size \n");
+
+			break;
+		}
+
+		s2_input[i] = array[i];	
+
 	}
 }
