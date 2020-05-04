@@ -1,9 +1,12 @@
 #include <stdio.h>
+
 #include <stdlib.h>
 
 char s1(char random[]);
 
-char s2(char s2_input[], int index, char replacement[]);
+char s2(char s2_input[], int index);
+
+char strfilter(char random[], char s2_input[], char replacement);
 
 int main()
 {
@@ -13,16 +16,13 @@ int main()
 
 	char random_generator[index];
 
-
-	int s2_index;
+	int s2_index = 21;
 
 	char s2_[s2_index];
 
-	char change[1];
+	random_generator[index] = s1(random_generator); /* random s1 made */
 
-	random_generator[index] = s1(random_generator);
-
-	printf("s1 = {\"");
+	printf("\ns1 = {\"");
 
 	for(int i = 0; random_generator[i] != '\0'; i++)
 	{
@@ -31,7 +31,14 @@ int main()
 
 	printf("\"}\n");
 
-	s2(s2_, s2_index, change);
+	s2_[s2_index] = s2(s2_, s2_index); /* user input of what to search is made */
+
+	if(s2_[1] == '\0')
+	{
+		printf("invalid size");
+
+		exit(0);
+	}
 
 	printf("\ns2 = {\"");
 
@@ -42,11 +49,26 @@ int main()
 
 	printf("\"}\n");
 
+	char replacement;
+
+	replacement = getchar(); /* user replacement character */
+
 	printf("\nc = {\"");
 
-	for(int b = 0; change[b] != '\0'; ++b)
+	putchar(replacement);
+
+	printf("\"}\n");
+
+	char filter[index];
+
+	filter[index] = strfilter(random_generator, s2_, replacement); /* filters what the user wants */
+
+	printf("\nfiltered s1 = {\"");
+
+	for(int f = 0; random_generator[f] != '\0'; ++f)
 	{
-		putchar(change[b]);
+		putchar(random_generator[f]);
+
 	}
 
 	printf("\"}\n");
@@ -60,7 +82,7 @@ char s1(char random[])
 
 	char characters;
 
-	while(characters = 'A' + (rand() % 26))
+	while(characters = 'A' + (rand() % 26)) /* random generatro */
 	{
 		if(limit == 40)
 		{
@@ -80,9 +102,9 @@ char s1(char random[])
 	}
 }
 
-char s2(char s2_input[], int index, char replacement[])
+char s2(char s2_input[], int index)
 {
-	char array[20] = "1234567890123456789";
+	char array[21] = "123456789012345678901"; /* populated array to make sure no random memory is made */
 
 	char input;
 
@@ -95,16 +117,15 @@ char s2(char s2_input[], int index, char replacement[])
 		if(input == '\n')
 		{
 			array[count] = '\0';
+
 			break;
-		}
+		} 
 
 		else if(input < 65 || input > 90)
 		{
 			printf("invalid input");
 
-			array[count] = '\0';
-
-			break;
+			exit(0);
 		}
 
 		array[count] = input;
@@ -116,39 +137,20 @@ char s2(char s2_input[], int index, char replacement[])
 
 	for(int t = 0; t <= count ; ++t)
 	{
-		if((count < 2)  || count > 20)
-		{
-			printf("\ninvalid size \n");
-
-			break;
-		}
-
 		s2_input[t] = array[t];	
 	}
+}
 
-
-	char choice[1] = "1";
-
-	char input_;
-
-	int count_ = 0;
-
-	while(input_ = getchar() )
+char strfilter(char random[], char s2_input[], char replacement) /* replacement function */
+{
+	for(int vim = 0; s2_input[vim] != '\0'; ++vim)
 	{
-		if(input_ == '\n')
+		for(int git = 0; random[git] != '\0'; ++git)
 		{
-			choice[count_] = '\0';
-
-			break;
+			if(random[git] == s2_input[vim])
+			{
+				random[git] = replacement;
+			}
 		}
-
-		choice[count_] = input_;
-
-		count_++;
-	}
-
-	for(int u = 0; u <= 1; ++u)
-	{
-		replacement[u] = choice[u];
-	}
+	}	
 }
