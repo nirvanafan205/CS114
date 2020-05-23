@@ -13,7 +13,16 @@ int main()
 
 	for(int j = 0; j < 4; j++)
 	{
-		scanf("%s", ptr[j]->name);
+		char temp_first[10];
+		char temp_last[10];
+
+
+		scanf("%s", temp_first);
+		ptr[j]->name = temp_first;
+
+		scanf("%s", temp_last);
+		ptr[j]->name = temp_last;
+
 		//scanf("%s", ptr[j]->address);
 		//scanf("%s", ptr[j]->city_state);
 		//scanf("%d", &ptr[j]->zip);
@@ -21,7 +30,7 @@ int main()
 
 	for(int k = 0; k < 4; k++)
 	{
-		printf("%s", ptr[k]->name);
+		printf("%s \n", ptr[k]->name);
 		//printf("%s", ptr[k]->address);
 		//printf("%s", ptr[k]->city_state);
 		//printf("%d\n", ptr[k]->zip);
