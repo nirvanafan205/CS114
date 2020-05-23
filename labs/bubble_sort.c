@@ -1,27 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "sort.h"
-
-struct numbers
-{
-	int data;
-};
+#include "other.h"
 
 int main()
 {
-	struct numbers **ptr = malloc(5 *sizeof(struct numbers *)); /* array of pointers to structures size of 5 */
+	struct numbers **ptr = malloc(4 *sizeof(struct numbers *)); /* array of pointers to structures size of 5 */
 
-	for(int i = 0; i < 5; i++)
+	for(int i = 0; i < 4; i++)
 	{
 		ptr[i] = malloc(sizeof(struct numbers)); /* allocating */
 	}
 
-	for(int j = 0; j < 5; j++)
+	for(int j = 0; j < 4; j++)
 	{
-		scanf("%d", &ptr[j]->data); /* adding value with i/o redirection */
+		scanf("%s", ptr[j]->name);
+		//scanf("%s", ptr[j]->address);
+		//scanf("%s", ptr[j]->city_state);
+		//scanf("%d", &ptr[j]->zip);
 	}
 
-	int n = 5;
-
-	sort(ptr, n);
+	for(int k = 0; k < 4; k++)
+	{
+		printf("%s", ptr[k]->name);
+		//printf("%s", ptr[k]->address);
+		//printf("%s", ptr[k]->city_state);
+		//printf("%d\n", ptr[k]->zip);
+	}
 }
